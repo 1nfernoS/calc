@@ -1,4 +1,7 @@
 import decimal, datetime
+#TODO:
+#More operations by once
+#Operators priority and ()
 #            |`-.._____..-'|
 #            `./ __`' __ \,'
 #             | (|_) (|_) |
@@ -15,7 +18,11 @@ def hist():#  ; _  .  __  :
 #            :-.'  ;'  / _,'`------.
 def logging(res):#-`'''-'-''--.---  )
 #                         SSt `----'    
-    log = open('history.txt', 'a')
+    try:
+        log = open('history.txt', 'x')
+        log.write('Date			   | Calculation\n')
+    except FileExistsError:
+        log = open('history.txt', 'a')
     log.write(str(datetime.datetime.utcnow()) + ' | ' + s + ' = ' + str(res) + '\n')
     log.close()
     
@@ -97,7 +104,8 @@ while True:
         elif s == 'hist':
             hist()
         elif s == 'help' or s == '/help' or s == '--help' or s == '-help' or s == '?' or s == '/?' or s == 'h':
-            print('''This is simple calculator. List of commands:\n
+            print('''============================================================================\n
+                  This is simple calculator. List of commands:\n
                   +          to sum\n
                   -          to differ\n
                   *          to multiply\n
@@ -106,8 +114,11 @@ while True:
                   %, mod     to modulus\n
                   hist       to get history of calculations\n
                   for exit type e, ex, exit, c, close, q, quit
-                  for this message type help, h, -help, --help, /help, ?, /?
-                  ==========================================================\n''')   
+                  for this message type help, h, -help, --help, /help, ?, /?\n\n
+                  Input format:\n
+                  [num]' '[operator]' '[num].\n
+                  Example: 3 + 7\n
+============================================================================\n''')   
         elif s == 'a' or s == 'about':
             print('''Simple calculator v1.4\n\n\n
                 Author: Misha Gaydenko\n\n
@@ -144,20 +155,6 @@ while True:
             operator(inp)
     except ValueError:
         continue
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    except IndexError:
+        print('Incorrect input. Type like 2 + 7 or type h for help')
+        continue
