@@ -92,6 +92,18 @@ while True:
                   for exit type e, ex, exit, c, close, q, quit
                   for this message type help, h, -help, --help, /help, ?, /?
                   ==========================================================\n''')   
+        elif s == 'a' or s == 'about':
+            print('''Simple calculator v1.4\n\n\n
+                Author: Misha Gaydenko\n\n
+                Special thanks to\n\n
+                General code partner\n
+                Proshin Egor\n\n
+                Spectators\n
+                Lomaev Aleksei\n
+                Kondrat'ev Leon\n\n
+                              AND YOU\n\n\n
+                For  non-commercial use ONLY!!!\n
+                College of Communications №54, 1ISP11-6, 2019''')
         else:
             inp = s.split(' ')
             if inp[0].find('.') != -1:
