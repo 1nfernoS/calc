@@ -1,11 +1,20 @@
 import decimal, datetime
-
-def hist():
+#            |`-.._____..-'|
+#            `./ __`' __ \,'
+#             | (|_) (|_) |
+def hist():#  ; _  .  __  :
+#             `.,' - `-. ,'
+#               `, `_  .'
+#               /       \
     with open('history.txt') as f:
-        text = f.read()
-    print(text)
-
-def logging(res):
+        text = f.read()# |_
+    print(text)# .    .  | \
+#           : :   \   |  |  :
+#           |  \   :`-;  ;  |
+#           :   :  | /  /   ;
+#            :-.'  ;'  / _,'`------.
+def logging(res):#-`'''-'-''--.---  )
+#                         SSt `----'    
     log = open('history.txt', 'a')
     log.write(str(datetime.datetime.utcnow()) + ' | ' + s + ' = ' + str(res) + '\n')
     log.close()
@@ -16,7 +25,14 @@ def sum(n1,n2):
         res = int(res)
     print('{} + {} = {}'.format(n1, n2, res))
     logging(res)
-    
+'''
+   _~_    
+  (o o)   
+ /  V  \  
+/(  _  )\ 
+  ^^ ^^
+  Hello, pip
+'''
 def dif(n1,n2):
     res = n1-n2
     if res%1 == 0:
@@ -110,6 +126,17 @@ while True:
                 inp[0] = float(inp[0])
             else:
                 inp[0] = int(inp[0])
+##                      /^--^\     /^--^\     /^--^\                       
+##                      \____/     \____/     \____/                       
+##                     /      \   /      \   /      \                      
+##                    |        | |        | |        |
+##                     \__  __/   \__  __/   \__  __/
+##|^|^|^|^|^|^|^|^|^|^|^|^\ \^|^|^|^/ /^|^|^|^|^\ \^|^|^|^|^|^|^|^|^|^|^|^|
+##| | | | | | | | | | | | |\ \| | |/ /| | | | | | \ \ | | | | | | | | | | |
+##########################/ /######\ \###########/ /#######################
+##| | | | | | | | | | | | \/| | | | \/| | | | | |\/ | | | | | | | | | | | |
+##|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
+##Meow
             if inp[2].find('.') != -1:
                 inp[2] = float(inp[2])
             else:
@@ -117,3 +144,20 @@ while True:
             operator(inp)
     except ValueError:
         continue
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
